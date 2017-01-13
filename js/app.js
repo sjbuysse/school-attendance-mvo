@@ -69,6 +69,7 @@ $(function() {
       toggleAttendance: function(student, dayIndex){
         student.attendance[dayIndex] = !student.attendance[dayIndex];
         octopus.setMissedDays(student);
+        localStorage.students = JSON.stringify(students);
         view.render();
       },
       getAttendance: function(name, dayIndex){
